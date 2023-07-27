@@ -3,8 +3,12 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <string.h>
-
-typedef struct
+/**
+ *struct FormatHandler- variable structure
+ *@specifier: ...
+ *@handler: ...
+ */
+typedef struct FormatHandler
 {
 char specifier;
 int (*handler)(va_list);
