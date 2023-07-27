@@ -3,46 +3,49 @@
 #include <stdio.h>
 
 FormatHandler formatHandlers[] = {
-	{'c', printchar}
-	{'s', printstr}
-	{'d', printint}
-	{'i', printint}
+	{'c', printchar},
+	{'s', printstr},
+	{'d', printint},
+	{'i', printint},
 	{'\0', NULL}
 };
 
 int _printf(const char *format, ...)
 {
+	char a = 0;
+	int count = 0;
+	char p = '%';
 	va_list args;
 	va_start(args, format);
 
-	char a = 0;
-
-	const char *format = va_arg(args, const char*);
-
-while((a = *format) != '\0')
+	while((a = *format) != '\0')
 	{
 		if (a == '%')
 		{
 			format++;
 			if(*format == 'c')
 			{
-				printchar(va_arg(args, int));
+				count += printchar(args);
+
 			}
-				else if (*format == 's')
-				{
-				fputs(va_arg(args, const char *), stdout);
-				}
-				else if(*format == '%')
-				{
-				printchar('%');
-				}
+			else if (*format == 's')
+			{
+				count += printstr(args);
+			}
+			else if(*format == '%')
+			{
+				write(1, &p, 1);
+				count++;
+			}
 		}
 		else
 		{
-			printchar(a);
+			write(1, &a, 1);
+			count++;
 		}
 		format++;
 	}
 	va_end(args);
+	return (count);
 }
 

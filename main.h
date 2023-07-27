@@ -11,7 +11,7 @@ int (*handler)(va_list);
 } FormatHandler;
 
 int _printf(const char *format, ...);
-
+int _strlen(char *s);
 int printchar(va_list args);
 int printstr(va_list args);
 int printint(va_list args);

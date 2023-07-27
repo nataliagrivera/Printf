@@ -7,13 +7,12 @@
  *
  */
 
-int strlen(va_list args)
+int _strlen(char *s)
 {
-int len;
+	int len;
 
-for(len = 0; s[len] != '\0'; len++)
-	printchar(s[len]);
-return(0);
+	for(len = 0; s[len] != '\0'; len++);
+	return(len);
 }
 
 /**
@@ -24,7 +23,11 @@ return(0);
 int printchar(va_list args)
 {
 	char c = va_arg(args, int);
-	return write(1, &c, 1);
+	int count = 0;
+
+	write(1, &c, 1);
+	count++;
+	return (count);
 }
 
 /**
@@ -35,15 +38,17 @@ int printchar(va_list args)
 int printstr(va_list args)
 {
 	int len;
+	char *s = va_arg(args, char *);
 
-	(s = NULL);
+	if (s == NULL)
 		return(0);
+	len = _strlen(s);
 
-	write(1, s, strlen(s));
+	write(1, s, len);
 
-	len = strlen(s);
-	return(write(1, s, len));
+	return(len);
 }
+
 /**
  *printint - print integers
  *
@@ -52,10 +57,13 @@ int printstr(va_list args)
 int printint(va_list args)
 {
 
-int num = va_arg(args, int);
-char buffer[20];
-int len= printf(buffer, "%d", num);
+	int num = va_arg(args, int);
+	char buffer[20];
+	int len = sprintf(buffer, "%d", num);
 
-return write(1, buffer, len);
+	write(1, buffer, len);
+	return (len);
 
 }
+
+
