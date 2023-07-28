@@ -51,7 +51,7 @@ int main() {
     return 0;
 }
 ```
-## Compilation of this example
+## Example of execution
 
 To compile your code with the `_printf` function, use the following command:
 
@@ -68,6 +68,8 @@ The `_printf` function utilizes variadic arguments (denoted by `...`) through th
 
 ## Bugs
 
+## Authors 
+ Natalia Rivera and Diego Gonzalez
 None
 ```
 
