@@ -55,7 +55,7 @@ int main() {
 Output:
 
 ```
-Hello, A. My name is Diego, and I am 20 years old.
+Hello, D. My name is Diego, and I am 20 years old.
 ```
 
 ## Variadic Arguments
