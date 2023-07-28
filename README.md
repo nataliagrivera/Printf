@@ -58,10 +58,8 @@ To compile your code with the `_printf` function, use the following command:
 ```
 gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c# _printf
 
-Output:
 
-```
-Hello, D. My name is Diego, and I am 20 years old.
+Output: Hello, D. My name is Diego, and I am 20 years old.
 ```
 
 ## Variadic Arguments
