@@ -1,17 +1,70 @@
-.TH _PRINTF 3 _printf\-0.1
+.TH _PRINTF 3 "July 27, 2023"
 .SH NAME
-.B _printf
-\- outputs formatted data
+_printf - Outputs print text and variables according to format
+
 .SH SYNOPSIS
- #include "main.h"
- int _printf(const char *format, ...);
-.P
+#include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
+
+int _printf(const char *format, ...);
+
 .SH DESCRIPTION
- hey baby mammas how u doing?
+The \fB_printf\fP function is a custom C function that outputs formatted text and variables to the standard output (usually the console) based on the given format specifier.
+
+The \fB_printf\fP function supports the following format specifiers:
+
+.TP 5
+\fB%c\fP: Print a single character.
+.TP 5
+\fB%s\fP: Print a string.
+.TP 5
+\fB%%\fP: Print a percent sign.
+.TP 5
+\fB%d\fP or \fB%i\fP: Print a signed decimal integer.
+
+.SH PARAMETERS
+.TP 5
+\fBformat\fP: A string that provides the format for printing the output. It can contain format specifiers that determine how the subsequent arguments are printed.
+
+.SH RETURN VALUE
+The \fB_printf\fP function returns the number of characters successfully printed to the standard output. In case of an error, it returns a negative value.
+
+.SH EXAMPLES
+The following examples demonstrate the usage of \fB_printf\fP:
+
+.TP 5
+\fIExample 1:\fP
+.PP
+.B #include "main.h"
+.B #include <stdio.h>
+.B
+.B int main()
+.B {
+.B     int age = 30;
+.B     char grade = 'A';
+.B     float GPA = 3.8;
+.B     char name[] = "John Doe";
+.B
+.B     _printf("Hello, my name is %s. I am %d years old.\\n", name, age);
+.B     _printf("I received a grade of %c and my GPA is %.1f.\\n", grade, GPA);
+.B
+.B     return 0;
+.B }
+.PP
+
+.SH SEE ALSO
+fprintf(3), sprintf(3), snprintf(3)
+
 .SH AUTHOR
- Diego Gonzalez & Natalia Rivera
-.SH Copyright
- Holberton Cool School
+Your Name <your.email@example.com>
+
+.SH COPYRIGHT
+This manual page is distributed under the same terms as the _printf function itself.
+
+.SH BUGS
+Please report any bugs to <your.email@example.com>.
+
 
 
 
