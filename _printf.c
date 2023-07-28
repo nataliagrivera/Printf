@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * _printf - ...
- * @format: ...
- * Return: ...
+ * _printf - Outputs print text and variables according to format
+ * @format: string which provides the format to the main file serving as input
+ * Return: prints depending on format specifier that applie
  */
 int _printf(const char *format, ...)
 {

@@ -2,9 +2,9 @@
 #include <string.h>
 #include <stdio.h>
 /**
- *_strlen - ...
- *@s: ...
- *Return: lenght
+ *_strlen - function that returns lenght of the string
+ *@s: string which lenghts will be returned
+ *Return: lenght without null byte
  */
 
 int _strlen(char *s)
@@ -18,8 +18,8 @@ int _strlen(char *s)
 
 /**
  *printchar - will print a given character
- *@args: character to print
- *Return: ...
+ *@args: holds list of arguments
+ *Return: returns the character
  */
 int printchar(va_list args)
 {
@@ -33,7 +33,7 @@ int printchar(va_list args)
 
 /**
  *printstr - prints given string
- *@args: points to strings that will be printed
+ *@args: holds list of arguments
  *Return: length of string on success
  */
 int printstr(va_list args)
@@ -51,8 +51,8 @@ int printstr(va_list args)
 }
 
 /**
- *printint - print integers
- *@args: ...
+ *printint - prints integers
+ *@args: hold the list of arguments
  *Return: lenght
  */
 int printint(va_list args)

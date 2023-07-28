@@ -5,8 +5,8 @@
 #include <string.h>
 /**
  *struct FormatHandler- variable structure
- *@specifier: ...
- *@handler: ...
+ *@specifier: represents the character specifier
+ *@handler: function pointer
  */
 typedef struct FormatHandler
 {
