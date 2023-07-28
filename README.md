@@ -1,4 +1,4 @@
-# _printf 
+# _printf
 
 The printf function is a custom C function designed to output formatted text and variables to the standard output. It replicates the functionality of the standard C library function printf, offering you flexibility in printing various data types, such as characters, strings, and integers, using format specifiers.
 
@@ -51,6 +51,14 @@ int main() {
     return 0;
 }
 ```
+## Compilation
+
+To compile your code with the `_printf` function, use the following command:
+
+```
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format -o output_file source_file.c
+```
+
 
 Output:
 
@@ -65,3 +73,6 @@ The `_printf` function utilizes variadic arguments (denoted by `...`) through th
 ## Bugs
 
 None
+```
+
+Now, the man page includes the full compilation command before the output example. Feel free to customize the compilation command according to your specific requirements.
