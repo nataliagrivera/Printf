@@ -1,4 +1,4 @@
-.TH _PRINTF 3 "July 27, 2023"
+TH _PRINTF 3 _printf-0.1
 .SH NAME
 _printf - Outputs print text and variables according to format
 
@@ -13,7 +13,9 @@ int _printf(const char *format, ...);
 The \fB_printf\fP function is a custom C function that outputs formatted text and variables to the standard output (usually the console) based on the given format specifier.
 
 The \fB_printf\fP function supports the following format specifiers:
-
+ 
+COMPILE
+        gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.
 .TP 5
 \fB%c\fP: Print a single character.
 .TP 5
@@ -22,10 +24,6 @@ The \fB_printf\fP function supports the following format specifiers:
 \fB%%\fP: Print a percent sign.
 .TP 5
 \fB%d\fP or \fB%i\fP: Print a signed decimal integer.
-
-.SH PARAMETERS
-.TP 5
-\fBformat\fP: A string that provides the format for printing the output. It can contain format specifiers that determine how the subsequent arguments are printed.
 
 .SH RETURN VALUE
 The \fB_printf\fP function returns the number of characters successfully printed to the standard output. In case of an error, it returns a negative value.
@@ -60,5 +58,3 @@ Diego Gonzalez y Natalia Rivera
 
 .SH BUGS
 None
-
-
