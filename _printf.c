@@ -12,10 +12,8 @@ int _printf(const char *format, ...)
 	char a = 0;
 	int count = 0;
 	char p = '%';
-	int found = 0;
 
 	va_list args;
-
 	va_start(args, format);
 
 	while ((a = *format) != '\0')
@@ -40,9 +38,11 @@ int _printf(const char *format, ...)
 			{
 			count += printint(args);
 			}
-			else if (!found)
+			else
 			{
-			count += write(1, "%r", 2);
+			write(1, &p, 1);
+			write(1, &a, 1);
+			count +=2;
 			}
 		}
 		else
@@ -51,7 +51,7 @@ int _printf(const char *format, ...)
 			count++;
 		}
 		format++;
-	}
+		}
 	va_end(args);
 	return (count);
 }
