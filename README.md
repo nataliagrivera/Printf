@@ -58,22 +58,6 @@ To compile your code with the `_printf` function, use the following command:
 ```
 gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c# _printf
 
-The printf function is a custom C function designed to output formatted text and variables to the standard output. It replicates the functionality of the standard C library function printf, offering you flexibility in printing various data types, such as characters, strings, and integers, using format specifiers.
-
-## Description
-
-The `_printf` function takes a format string as its first argument, which contains placeholders for the values to be printed. These placeholders are represented by format specifiers such as `%c`, `%s`, `%d`, and `%i`. When `_printf` is called, it processes the format string and replaces the placeholders with the corresponding values provided as subsequent arguments.
-
-## Usage
-
-To use the `_printf` function, include the necessary header files:
-
-```c
-#include "main.h"
-#include <stdarg.h>
-```
-
-
 Output:
 
 ```
