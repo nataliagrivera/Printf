@@ -1,4 +1,4 @@
-# _printf July 2023
+# _printf 
 
 The `_printf` function is a custom C function designed to output formatted text and variables to the standard output. It replicates the functionality of the standard C library function `printf`, offering you flexibility in printing various data types, such as characters, strings, and integers, using format specifiers.
 
