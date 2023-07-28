@@ -67,10 +67,7 @@ Output: Hello, D. My name is Diego, and I am 20 years old.
 The `_printf` function utilizes variadic arguments (denoted by `...`) through the `va_list` mechanism provided by the `<stdarg.h>` header. Variadic arguments allow the function to accept a variable number of arguments after the `format` parameter. These additional arguments correspond to the values that need to be printed based on the format specifiers in the `format` string.
 
 ## Bugs
+none 
 
 ## Authors 
  Natalia Rivera and Diego Gonzalez
-None
-```
-
-Now, the man page includes the full compilation command before the output example. Feel free to customize the compilation command according to your specific requirements.
