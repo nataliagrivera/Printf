@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	char a = 0;
 	int count = 0;
 	char p = '%';
+	int found = 0;
 
 	va_list args;
 
@@ -38,6 +39,10 @@ int _printf(const char *format, ...)
 			else if (*format == 'd' || *format == 'i')
 			{
 			count += printint(args);
+			}
+			else if (!found)
+			{
+			count += write(1, "%r", 2);
 			}
 		}
 		else
