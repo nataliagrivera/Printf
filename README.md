@@ -43,9 +43,9 @@ The `_printf` function supports the following format specifiers:
 #include <stdio.h>
 
 int main() {
-    char initial = 'A';
-    char name[] = "Alice";
-    int age = 25;
+    char initial = 'D';
+    char name[] = "Diego";
+    int age = 20;
 
     _printf("Hello, %c. My name is %s, and I am %d years old.\n", initial, name, age);
     return 0;
